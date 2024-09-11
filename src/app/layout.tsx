@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Button } from "@/components/ui/button";
+import { MdMessage } from "react-icons/md";
+import { CiSearch } from "react-icons/ci";
+import Link from "next/link";
+import Nav from "@/components/nav";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      
+      {/* <body className={'${inter.className} bg-customWhite'}></body> */}
+      <body className={inter.className }>
+<div className="bg-custom-image bg-cover bg-center ">
+      <Nav/>
+        {children}
+
+        </div>
+        </body>
+      
     </html>
   );
 }
